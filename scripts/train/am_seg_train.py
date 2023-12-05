@@ -1,4 +1,4 @@
-# this script runs image segmentation of celegans dataset based by transfer learning
+# this script runs image segmentation of AMF dataset based by transfer learning
 # Mask-RCNN on detectron2:
 import argparse
 import os
@@ -51,7 +51,7 @@ def build_aug(cfg):
 class ValidationLoss_checkpoint(HookBase):
     # adapted from https://github.com/facebookresearch/detectron2/issues/810
     # https://github.com/facebookresearch/detectron2/issues/2114
-    # validaition is done for each batch and summarized for a few iteration (smaller than epoch, similar to train)
+    # validatiion is done for each batch and summarized for a few iteration (smaller than epoch, similar to train)
     def __init__(self,cfg):
         super().__init__()
         self.cfg=cfg.clone()# a local config for validaiton
